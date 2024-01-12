@@ -87,10 +87,11 @@
 			// List 는 클래스라 힙에 저장
 
 			List<int> list1 = new List<int>(1000000);
-			list1.Capacity;
+			//list1.Capacity;
 			for ( int i = 0;  i < 100000; i++ ) 
 			{
-				list1.Add(i)};
+				list1.Add(i);
+			}
 
 
 
@@ -121,6 +122,28 @@
 			// 탐색
 			int indexOf = list.IndexOf("2번 데이터");
 			int findIndex = list.FindIndex(x => x.Contains("중간"));
+
+			//List<string> list = new List<string>();
+			//
+			//list.Add("0번데이터이니라");
+			//list.Add("1번 데이터이니라");
+			//list.Add("2번데이터이니라"); // 되도록 이거 쓰라는건 List 구조 알면 이유가 나옴
+			//
+			//list.Insert(1, "중간데이터 1번자리에 추가"); // 이렇게 있는거에 끼면 있는 자료를 뒤로 밀어버림
+			//list.Insert(3, "중간데이터 3번자리에 추가");
+			//
+			//
+			//list.Remove("1번 데이터이니라"); // O(n)인거 이해했지?했으리라 믿는다잉
+			//list.RemoveAt(2);
+			//
+			//bool fail = list.Remove("1번 데이터이니라"); // 이렇게 없는거 지우래서 못지우면 반환값이 bool- false임
+			//
+			//list[0] = "수정된 0번 데이터"; // 
+			//string text = list[2];
+			//
+			//int insdexof = list.IndexOf("4번째 데이터이니라"); // 있으면 찾아주고 없으면 -1 반환
+			//
+			// Deque 라는것도 있다리 C#엔 없다고 한다
 		}
 	}
 }
