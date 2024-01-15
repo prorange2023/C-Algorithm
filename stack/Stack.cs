@@ -11,7 +11,7 @@ namespace DataStructure
 	* 
 	* 한 클래스의 인터페이스를 사용하고자 하는 다른 인터페이스로 변환
 	******************************************************************/
-	internal class Stack
+	internal class Stack<T>
 	{
 		private List<T> container;
 
