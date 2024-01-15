@@ -10,6 +10,7 @@ namespace DataStructure
 	* 어댑터 패턴 (Adapter)
 	* 
 	* 한 클래스의 인터페이스를 사용하고자 하는 다른 인터페이스로 변환
+	* 스택은 리스트를 이용해서 구현
 	******************************************************************/
 	internal class Stack<T>
 	{
@@ -22,19 +23,19 @@ namespace DataStructure
 
 		public int Count { get { return container.Count; } }
 
-		public void Push(T item)
+		public void Push(T item) // 집어넣기
 		{
 			container.Add(item);
 		}
 
-		public T Pop()
+		public T Pop() // 꺼내기
 		{
 			T item = container[container.Count - 1];
 			container.RemoveAt(container.Count - 1);
 			return item;
 		}
 
-		public T Peek()
+		public T Peek() // 다음으로 꺼내질것, 즉 제일 위에 있는것 확인
 		{
 			return container[container.Count - 1];
 		}

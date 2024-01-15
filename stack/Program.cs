@@ -29,14 +29,14 @@
 		{
 			Stack<int> stack = new Stack<int>();
 
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < 5; i++)					// 데이터 넣기
 			{
 				stack.Push(i);                          // 입력순서 : 0, 1, 2, 3, 4
 			}
 
 			Console.WriteLine(stack.Peek());            // 최상단 : 4
 
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 3; i++)					// 데이터 
 			{
 				Console.WriteLine(stack.Pop());         // 출력순서 : 4, 3, 2
 			}
