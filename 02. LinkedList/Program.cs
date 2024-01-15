@@ -118,10 +118,14 @@
 			LinkedListNode<string> nextNode1 = node1.Next;
 
 
+			
+
 			// 탐색
 			LinkedListNode<string> findNode = linkedList.Find("5번 데이터");
 
 			LinkedListNode<string> findNode3 = linkedList.Find("3번 데이터"); // 이것도 다 노드? 찾는것도 노드?
+
+
 		}
 	}
 }
