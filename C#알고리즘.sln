@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00. Algorithm", "00. Algori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. List", "01. List\01. List.csproj", "{FEB674A3-E30F-4391-AC2B-408BDBECA47C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. LinkedList", "02. LinkedList\02. LinkedList.csproj", "{2E859735-8333-4A22-B458-7FA3F903E832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. LinkedList", "02. LinkedList\02. LinkedList.csproj", "{2E859735-8333-4A22-B458-7FA3F903E832}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Stack", "stack\03. Stack.csproj", "{B54E837B-212F-43CB-AA35-6AF70100E541}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2E859735-8333-4A22-B458-7FA3F903E832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E859735-8333-4A22-B458-7FA3F903E832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E859735-8333-4A22-B458-7FA3F903E832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54E837B-212F-43CB-AA35-6AF70100E541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54E837B-212F-43CB-AA35-6AF70100E541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54E837B-212F-43CB-AA35-6AF70100E541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54E837B-212F-43CB-AA35-6AF70100E541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
