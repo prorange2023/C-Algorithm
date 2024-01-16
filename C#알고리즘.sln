@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. List", "01. List\01. Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. LinkedList", "02. LinkedList\02. LinkedList.csproj", "{2E859735-8333-4A22-B458-7FA3F903E832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Stack", "stack\03. Stack.csproj", "{B54E837B-212F-43CB-AA35-6AF70100E541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Stack", "stack\03. Stack.csproj", "{B54E837B-212F-43CB-AA35-6AF70100E541}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Queue", "04. Queue\04. Queue.csproj", "{149DF7DA-E7BD-4BD5-BC77-8D88D961BA97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. BinarySearchTree", "05. BinarySearchTree\05. BinarySearchTree.csproj", "{57AB3E61-6E53-4012-902D-D6C5CFF6F780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{B54E837B-212F-43CB-AA35-6AF70100E541}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B54E837B-212F-43CB-AA35-6AF70100E541}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B54E837B-212F-43CB-AA35-6AF70100E541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149DF7DA-E7BD-4BD5-BC77-8D88D961BA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149DF7DA-E7BD-4BD5-BC77-8D88D961BA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149DF7DA-E7BD-4BD5-BC77-8D88D961BA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149DF7DA-E7BD-4BD5-BC77-8D88D961BA97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57AB3E61-6E53-4012-902D-D6C5CFF6F780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57AB3E61-6E53-4012-902D-D6C5CFF6F780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57AB3E61-6E53-4012-902D-D6C5CFF6F780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57AB3E61-6E53-4012-902D-D6C5CFF6F780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
