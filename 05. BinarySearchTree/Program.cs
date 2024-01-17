@@ -12,7 +12,7 @@
          * 탐색 : 자신의 노드보다 작은 값들은 왼쪽, 큰 값들은 오른쪽에 위치
          *******************************************************************/
 
-		// 이진탐색 : 매우 효율적 탐색방법, 정렬된 데이터만 가능
+		// 이진탐색 : 매우 효율적 탐색방법, 정렬된 데이터만 가능 n번의 시도를 통해 2의 n승갯수의 데이터를 볼 수 있음
 		// 순차탐색 : 무조건 가능
 		// 리스트, 연결리스트는 정렬시키면서 정리하는건 못해서 순차탐색만 가능
 
@@ -135,7 +135,7 @@
 		//    5     9                  3     8
 		//  ┌─┴─┐       <- 좌회전 --       ┌─┴─┐      
 		//  3   6                          6   9 
-		//
+		// BP가 두개 이상 차이나면 하게됨, 불균형 문제가 있으니 자가균형기능이 있어야 한다 정도는 숙지할 것.
 		// 대표적인 방식으로 Red-Black Tree (C#), AVL Tree 등을 통해 불균형상황을 파악
 
 
@@ -207,8 +207,8 @@
 
 			// 탐색
 			sortedDictionary.ContainsKey("방패"/*키값*/);           // 포함 확인, true 혹은 false 반환
-			sortedDictionary.TryGetValue("방패", out Item shield); // 예외처리까지 감안하여 key 가지고 value 탐색 시도
-			Item item = sortedDictionary["방패"]; // 방패 키값 찾기, 인덱서를 통한 탐색
+			sortedDictionary.TryGetValue("방패"/*키값*/, out Item shield); // 예외처리까지 감안하여 key 가지고 value 탐색 시도
+			Item item = sortedDictionary["방패"/*키값*/]; // 방패 키값 찾기, 인덱서를 통한 탐색
 
 			// 순서대로 출력시 정렬된 결과 확인
 			foreach (string name in sortedDictionary.Keys)
@@ -237,6 +237,39 @@
 				this.cost = cost;
 			}
 			// 키값가지고 밸류타입 찾을 수 있는 구조를 딕셔너리라고함
+		}
+
+		// 아래는 활용례
+		public class ResourceManager
+		{
+			Dictionary<string, Image> imageDic;
+
+
+			public ResourceManager()
+			{
+				imageDic = new Dictionary<string, Image>();
+
+				imageDic.Add("오크", new("C:\\Resource\\Orc.jpg"));
+
+				
+			}
+
+			public Image GetImage(string name)
+			{
+				return imageDic[name];
+			}
+
+			public class Image
+			{
+				
+			}
+			
+				
+			public class Game
+			{
+
+			}
+
 		}
 	}
 }

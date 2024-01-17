@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Datastructure
 
 {
-	internal class List<T> // <T>는 일반화란 뜻
+	public class List<T> // <T>는 일반화란 뜻
 	{
 		private const int DefaultCapacity = 4;
 
