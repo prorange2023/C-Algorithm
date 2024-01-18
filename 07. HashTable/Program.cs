@@ -1,4 +1,6 @@
-﻿namespace _07._HashTable
+﻿using System.Collections;
+
+namespace _07._HashTable
 {
 	internal class Program
 	{
@@ -122,12 +124,26 @@
 		//                                ↑(다음위치에 저장)
 
 
-		// <해시테이블의 시간복잡도>
+		// <해시테이블의 시간복잡도> 
+		// 삽입삭제 빨라보인다고 잦은 수정이 필요한데 쓰면 안됨. 효율이 좋지 않다. 엄청많은 자료를 모아놓고 탐색을 할때 좋은 자료구조다.
+
 		// 접근       탐색       삽입       삭제
 		//  X         O(1)       O(1)       O(1)
 
 		static void Main(string[] args)
 		{
+			Hashtable ht = new Hashtable();
+
+			ht.Add("abc", 123);
+			ht.Add(245, "cdb");
+			// 일반화 되있지 않은 자료형. 검색방법이 난해하다.
+
+			int value = (int)ht["abc"];
+
+			// 일반적이지가 않다.
+			// ArrayList 라는것도 비슷하다.
+
+
 			// 해시테이블 기반의 HashSet 자료구조
 			// 중복이 없는 해시기반의 저장소
 			// 정렬을 보장하진 않는다.
