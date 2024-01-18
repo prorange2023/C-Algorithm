@@ -167,9 +167,9 @@ namespace _07._HashTable
 			set.Contains("A");      // 포함 확인
 
 			// 순서대로 출력시 포함된 순서대로 결과 확인
-			foreach (string value in set)
+			foreach (string valuees in set)
 			{
-				Console.Write(value);   // output : DCAE
+				Console.Write(valuees);   // output : DCAE
 			}
 			Console.WriteLine();
 
@@ -200,9 +200,9 @@ namespace _07._HashTable
 			dictionary[4] = "F"; // 인덱스 기능 작동
 
 			// 순서대로 출력시 정렬된 결과 확인
-			foreach (string value in dictionary.Values)
+			foreach (string values in dictionary.Values)
 			{
-				Console.Write(value);     // output : ABCD
+				Console.Write(values);     // output : ABCD
 			}
 			Console.WriteLine();
 		}
