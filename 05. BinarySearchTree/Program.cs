@@ -216,7 +216,7 @@
 				Console.WriteLine(name);
 			}
 
-			foreach (Item item in sortedDictionary.Values)
+			foreach (Item items in sortedDictionary.Values)
 			{
 				Console.WriteLine($"{item.name}, {item.cost}");
 			}
