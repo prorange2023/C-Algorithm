@@ -94,7 +94,7 @@ namespace _09._Sorting
 		// 단점 공간복잡도
 		// 시간복잡도 -  O(nlogn)
 		// 공간복잡도 -  O(n)
-		// 안정정렬   -  O
+		// 안정정렬   -  O - 유일한 안정정렬
 		public static void MergeSort(IList<int> list, int start, int end)
 		{
 			if (start == end)//하나면
@@ -117,7 +117,7 @@ namespace _09._Sorting
 			int rightIndex = mid + 1; // 왜 미드 +1이더라
 
 			// 분할 정렬된 List를 병합
-			while (leftIndex <= mid/*왼쪽배열이 모두 비고*/ && rightIndex <= end/*오른쪽 배열이 모두 비고*/)
+			while (leftIndex <= mid/*왼쪽배열이 모두 있고*/ && rightIndex <= end/*오른쪽 배열이 모두 있고*/)
 			{
 				if (list[leftIndex] < list[rightIndex])
 				{
@@ -131,14 +131,14 @@ namespace _09._Sorting
 
 			if (leftIndex > mid/*왼쪽이 다 비워진 경우*/)
 			{
-				for (int i = rightIndex; i <= end; i++)
+				for (int i = rightIndex; i <= end; i++) // 왜 이하지??
 				{
 					sortedList.Add(list[i]);
 				}
 			}
 			else
 			{
-				for (int i = leftIndex; i <= mid; i++)
+				for (int i = leftIndex; i <= mid; i++) // 왜 이하지??
 				{
 					sortedList.Add(list[i]);
 				}
