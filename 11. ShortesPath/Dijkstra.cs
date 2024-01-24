@@ -41,7 +41,7 @@ namespace _11._ShortesPath
 			for (int i = 0; i < size; i++)
 			{
 				// 1. 방문하지 않은 정점 중 가장 가까운 정점부터 탐색
-				int next = -1; //  방문하지 않은 결과
+				int next = -1; // 방문하지 않은 결과 / 다음으로 탐색할 정점/ 제일 가까운 정점
 				int minCost = INF; // 가장 가까운 값
 				for (int j = 0; j < size; j++)
 				{
