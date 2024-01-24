@@ -28,6 +28,7 @@ namespace _10._Searching
 		// <이진 탐색>
 		// 정렬이 되어있는 자료구조에서 2분할을 통해 데이터를 탐색
 		// 단, 이진 탐색은 정렬이 되어 있는 자료에만 적용 가능
+		// sorted 시리즈는 이진탐색 기반이라 가능한 이진탐색을 사용함.
 		// 보관탐색이란걸 진행한다....
 		// 시간복잡도 - O(logn)
 		public static int BinarySearch<T>(in IList<T> list, in T item) where T : IComparable<T>
@@ -61,6 +62,7 @@ namespace _10._Searching
 		// 그래프의 분기를 만났을 때 최대한 깊이 내려간 뒤,
 		// 분기의 탐색을 마쳤을 때 다음 분기를 탐색
 		// 스택을 통해 구현 -- 이게 중요하다
+		// 위 사항이 왜 좋느냐?
 		public static void DFS(in bool[,] graph, int start, out bool[] visited, out int[] parents)
 		{
 			visited = new bool[graph.GetLength(0)];
@@ -94,7 +96,8 @@ namespace _10._Searching
 		// <너비 우선 탐색 (Breadth-First Search)>
 		// 그래프의 분기를 만났을 때 모든 분기들을 탐색한 뒤,
 		// 다음 깊이의 분기들을 탐색
-		// 큐를 통해 탐색
+		// 큐를 통해 탐색 담아서 하나씩 꺼내는 식
+		// 최단거리 보장
 
 		// DFS, BFS 뭐가더 좋은가요? 그런거 없다
 		public static void BFS(in bool[,] graph, int start, out bool[] visited, out int[] parents/*어느 정점에 의해 탐색되는지*/)

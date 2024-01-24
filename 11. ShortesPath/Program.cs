@@ -6,43 +6,66 @@
 
 		static void Main(string[] args)
 		{
-			int[,] graph = new int[9, 9]
+			int[,] graph = new int[8, 8]
 			{
-				{   0, INF,   1,   7, INF, INF, INF,   5, INF},
-				{ INF,   0, INF, INF, INF,   4, INF, INF, INF},
-				{ INF, INF,   0, INF, INF, INF, INF, INF, INF},
-				{   5, INF, INF,   0, INF, INF, INF, INF, INF},
-				{ INF, INF,   9, INF,   0, INF, INF, INF,   2},
-				{   1, INF, INF, INF, INF,   0, INF,   6, INF},
-				{ INF, INF, INF, INF, INF, INF,   0, INF, INF},
-				{   1, INF, INF, INF,   4, INF, INF,   0, INF},
-				{ INF,   5, INF,   2, INF, INF, INF, INF,   0}
+				{ INF, INF,   6,   6, INF, INF, INF, INF},
+				{ INF, INF,   9, INF, INF,   3, INF, INF},
+				{   6,   9, INF, INF, INF, INF,   9, INF},
+				{   6, INF, INF, INF, INF, INF, INF,   4},
+				{ INF, INF, INF, INF, INF, INF,   9,   8},
+				{ INF,   3, INF, INF, INF, INF, INF,   6},
+				{ INF, INF,   9, INF,   9, INF, INF, INF},
+				{ INF, INF, INF,   4,   8,   6, INF, INF}
+
 			};
 
 			Dijkstra.ShortestPath(in graph, 0, out int[] distance, out int[] path);
 
 			Console.WriteLine("<Dijkstra>");
 			PrintDijkstra(distance, path);
+
+			int[,] graph2 = new int[8, 8]
+			{
+				{ INF,   9, INF,   1, INF, INF, INF, INF},
+				{   9, INF, INF,   7, INF, INF,   4, INF},
+				{ INF, INF, INF, INF, INF, INF, INF, INF},
+				{   1,   7, INF, INF, INF,   3, INF,   7},
+				{ INF, INF, INF, INF, INF, INF,   4,   6},
+				{ INF, INF, INF,   3, INF, INF, INF, INF},
+				{ INF,   1, INF, INF,   4, INF, INF, INF},
+				{ INF, INF, INF,   3, INF, INF,   6, INF}
+
+			};
+
+			Dijkstra.ShortestPath(in graph2, 0, out int[] distance2, out int[] path2);
+
+			Console.WriteLine("<Dijkstra>");
+			PrintDijkstra(distance2, path2);
+			int size2 = graph2.GetLength(0);
+			Console.WriteLine(size2);
+
+
+
 		}
 
 		private static void PrintDijkstra(int[] distance, int[] path)
 		{
-			Console.WriteLine($"{"Vertex",8}{"Visit",8}{"Path",8}");
+			Console.WriteLine($"{"Vertex",7}{"Visit",7}{"Path",7}");//여기 숫자 데이터 갯수 맞춰서 바꿔야함 
 
 			for (int i = 0; i < distance.Length; i++)
 			{
-				Console.Write($"{i,8}");
+				Console.Write($"{i,7}");
 
 				if (distance[i] >= INF)
 				{
-					Console.Write($"{"INF",8}");
+					Console.Write($"{"INF",7}");
 				}
 				else
 				{
-					Console.Write($"{distance[i],8}");
+					Console.Write($"{distance[i],7}");
 				}
 
-				Console.WriteLine($"{path[i],8}");
+				Console.WriteLine($"{path[i],7}");
 			}
 		}
 	}
